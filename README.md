@@ -1,6 +1,6 @@
 # iptv
 
-iptv 源。
+-iptv 源。
 
 # ipyx
 
