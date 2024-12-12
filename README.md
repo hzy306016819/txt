@@ -2,6 +2,6 @@
 
 - iptv 源。
 
-# ipyx
+# yxip
 
 - CF优选ip
