@@ -1,0 +1,14 @@
+version: '3'
+services:
+  aliyundrive-webdav:
+    image: messense/aliyundrive-webdav
+    container_name: aliyundrive-webdav
+    restart: unless-stopped
+    ports:
+      - "1006:8080"
+    volumes:
+      - "/volume1/docker/aliyun/aliyundrive-webdav/:/etc/aliyundrive-webdav/"
+    environment:
+      REFRESH_TOKEN: 'eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJzdWIiOiJhOGI2MTJmMDhhZjc0YjYxOWUyNzhmMDgzNDhjMzFlMSIsImF1ZCI6IjczZTYxMTgzMWE3YzRkODdhYzQ5Yzg0ODFiZjlmMmM0IiwiZXhwIjoxNzI3NTcyNDQ4LCJpYXQiOjE3MTk3OTY0NDgsImp0aSI6IjhkMDdkMmJmZGMzMDQ2NzM5ZTdiNDgxYTcwNzFmYzM5In0.H9s6LTEI9Z4FclQW9rc_FqlnWxZXlZHX55WXDqapXrwPtGCgOsxlzYoxtdt1o5PPDciSP7DrbaL1Yv6zEGaFBA' # 请替换为您的刷新令牌
+      WEBDAV_AUTH_USER: admin # WebDAV 认证用户名
+      WEBDAV_AUTH_PASSWORD: 123456 # WebDAV 认证密码
